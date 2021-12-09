@@ -1,14 +1,8 @@
 package org.example;
 
-import com.sun.deploy.cache.BaseLocalApplicationProperties;
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.jupiter.api.*;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-
-import java.util.concurrent.TimeUnit;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 
 public class AuthorizationTest extends AbstractTest{
 
@@ -16,17 +10,9 @@ public class AuthorizationTest extends AbstractTest{
     @DisplayName("Авторизация")
     public void authorization() {
         driver.get("https://spb.espartos.ru/auth/");
-        new AuthorizationPage(getWebDriver()).loginIn("kristjaschaulite@gmail.com","123456789");
-
-//
-////        driver.findElement(By.xpath("//a[contains(text(),'Войти')]")).click();
-//        driver.findElement(By.name("USER_LOGIN")).sendKeys("kristjaschaulite@gmail.com");
-//        driver.findElement(By.name("USER_PASSWORD")).sendKeys("123456789");
-//        driver.findElement(By.name("Login")).click();
-
+        new AuthorizationPage(getDriver()).loginIn("vahoji2805@ningame.com","987654321");
         Assertions.assertTrue(driver.getCurrentUrl().equals("https://spb.espartos.ru/"));
-
-//        driver.close();
     }
+
 
 }

@@ -5,9 +5,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class AuthorizationPage extends AbstractPage {
-//
-//    @FindBy(xpath="//a[contains(text(),'Войти')]")
-//    private WebElement loginButton;
 
     @FindBy(name="USER_LOGIN")
     private WebElement login;
@@ -22,9 +19,8 @@ public class AuthorizationPage extends AbstractPage {
         super(driver);
     }
     public void loginIn(String login, String password) {
-//        Actions loginIn = new Actions(getDriver());
-        this.login.sendKeys();
-        this.password.sendKeys();
+        this.login.sendKeys(login);
+        this.password.sendKeys(password);
         this.enter.click();
     }
 }
