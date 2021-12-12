@@ -1,7 +1,6 @@
 package org.example;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.checkerframework.checker.units.qual.A;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -29,10 +28,10 @@ public abstract class AbstractTest {
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(5));
     }
 
-//    @AfterAll
-//    public static void exit(){
-//        if(driver !=null) driver.quit();
-//    }
+    @AfterAll
+    public static void exit(){
+        if(driver !=null) driver.quit();
+    }
 
     public static WebDriver getDriver(){
         return driver;

@@ -10,7 +10,8 @@ import org.openqa.selenium.support.ui.Select;
 
 import java.util.concurrent.TimeUnit;
 
-public class ProjectCreationTest {
+@Disabled
+public class ProjectCreation_CRM_Test {
 
     @BeforeAll
     public static void connection() {
@@ -74,7 +75,6 @@ public class ProjectCreationTest {
 
         driver.findElement(By.xpath("//button[contains(text(),'Сохранить и закрыть')]")).click();
 
-        //        driver.quit();
 //
 //        Assertions.assertTrue(driver.getCurrentUrl().equals("ссылка на созданный нами проект"));
 
